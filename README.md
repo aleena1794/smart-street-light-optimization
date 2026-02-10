@@ -5,9 +5,9 @@ The objective is to identify low nighttime traffic zones where smart dimming str
 
 ## Project Motivation
 Urban street lighting is a major contributor to municipal energy consumption. By analyzing traffic patterns, lighting intensity can be dynamically adjusted in low-utilization areas to improve:  
-Energy efficiency  
-Operational cost savings  
-Urban sustainability  
+- Energy efficiency  
+- Operational cost savings  
+- Urban sustainability  
 
 ## Datasets
 Berlin Street Lights data: https://download.geofabrik.de/europe/germany/berlin.html  
@@ -43,18 +43,18 @@ Estimated annual savings per cluster were calculated.
 
 ## Project Structure & Results
 
-The complete implementation of the project is available in Smart_street_light_optim.ipynb  
-All generated outputs and visualizations are stored in the results/ folder.  
+The complete implementation of the project is available in **Smart_street_light_optim.ipynb**  
+All generated outputs and visualizations are stored in the **results/** folder.  
 
 ### Generated Outputs  
-lamp_density_map.html - Interactive map of street lamp density per km² in Berlin.  
-traffic_intensity_morning_hours.html - Interactive map of traffic intensity per detector during morning hours (5:00–12:00).  
-traffic_intensity_night_hours.html - Interactive map of traffic intensity per detector during night hours (00:00–05:00).  
-kmeans_clusters_street_light_zones.html - Interactive map of Berlin zones identified using K-Means clustering.  
-kmeans_cluster_means.xlsx - Mean feature values per K-Means cluster.  
-lamps_percent_dimmable_per_cluster.png - Percentage of lamps that can be dimmed during night hours per cluster.  
-energy_cost_savings_per_cluster.png - Estimated energy cost savings per cluster (visualized).  
-energy_saving_per_cluster.xlsx - Estimated energy saving results per cluster.  
+- lamp_density_map.html - Interactive map of street lamp density per km² in Berlin.  
+- traffic_intensity_morning_hours.html - Interactive map of traffic intensity per detector during morning hours (5:00–12:00).  
+- traffic_intensity_night_hours.html - Interactive map of traffic intensity per detector during night hours (00:00–05:00).  
+- kmeans_clusters_street_light_zones.html - Interactive map of Berlin zones identified using K-Means clustering.  
+- kmeans_cluster_means.xlsx - Mean feature values per K-Means cluster.  
+- lamps_percent_dimmable_per_cluster.png - Percentage of lamps that can be dimmed during night hours per cluster.  
+- energy_cost_savings_per_cluster.png - Estimated energy cost savings per cluster (visualized).  
+- energy_saving_per_cluster.xlsx - Estimated energy saving results per cluster.  
 
 ## Key Results 
 Cluster-based zoning successfully separates low, moderate, and high-traffic areas.  
