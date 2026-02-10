@@ -1,89 +1,54 @@
-Smart Street Light Optimization – Urban Technology Project
-Overview
-
+# Smart Street Light Optimization – Urban Technology Project
+## Overview
 This project develops a data-driven framework for optimizing street lighting in Berlin using traffic detector data and machine learning clustering techniques.
-
 The objective is to identify low nighttime traffic zones where smart dimming strategies can reduce energy consumption while maintaining safety.
 
-Project Motivation
-
+## Project Motivation
 Urban street lighting is a major contributor to municipal energy consumption. By analyzing traffic patterns, lighting intensity can be dynamically adjusted in low-utilization areas to improve:
+Energy efficiency 
+Operational cost savings 
+Urban sustainability 
 
-Energy efficiency
+## Datasets
+Berlin Street Lights data: https://download.geofabrik.de/europe/germany/berlin.html  
+Traffic Detectors Locations: https://daten.berlin.de/datensaetze/standorte-verkehrsdetektion-berlin  
+Traffic Detector Count 2024: https://api.viz.berlin.de/daten/verkehrsdetektion?path=2024%2Fneue_qualitaetssicherung%2FFahrstreifendetektoren%2F  
+Berlin Districts: https://daten.odis-berlin.de/de/dataset/bezirksgrenzen/
 
-Operational cost savings
+## Methodology
+**1. Data Processing** 
+Integrated street lamp and traffic detector datasets 
+Computed lamp density 
 
-Urban sustainability
+**2. Feature Engineering** 
+Features used for clustering: 
+Lamp density 
+Traffic mean 
+Traffic peak 
+Morning mean 
+Night mean (00:00–05:00) 
+Detector presence 
 
-Methodology
-1. Data Processing
+**3. K-Means Clustering** 
+Standardized features using StandardScaler 
+Applied K-Means (k=4) 
+Identified traffic-based lighting zones 
 
-Integrated street lamp and traffic detector datasets
+**4. Dimming Strategy** 
+Defined dimmable lamps as: night_mean ≤ 5 vehicles/hour 
 
-Cleaned missing traffic values
+**5. Energy Savings Estimation**  
+Assumptions: 60W LED lamps, 50% dimming, 5 nighttime hours, €0.30 per kWh 
+Estimated annual savings per cluster were calculated. 
 
-Computed lamp density per 200m grid
+## Key Results 
+Cluster-based zoning successfully separates low, moderate, and high-traffic areas. 
+Significant dimming potential identified in low and moderate traffic zones. 
+Demonstrates measurable annual energy cost reduction. 
 
-2. Feature Engineering
-
-Features used for clustering:
-
-Lamp density
-
-Traffic mean
-
-Traffic peak
-
-Morning mean
-
-Night mean (00:00–05:00)
-
-Detector presence
-
-3. K-Means Clustering
-
-Standardized features using StandardScaler
-
-Applied K-Means (k=4)
-
-Identified traffic-based lighting zones
-
-4. Dimming Strategy
-
-Defined dimmable lamps as:
-
-night_mean ≤ 5 vehicles/hour
-
-5. Energy Savings Estimation
-
-Assumptions:
-
-60W LED lamps
-
-50% dimming
-
-5 nighttime hours
-
-€0.30 per kWh
-
-Estimated annual savings per cluster were calculated.
-
-Key Results
-
-Cluster-based zoning successfully separates low, moderate, and high-traffic areas.
-
-Significant dimming potential identified in low and moderate traffic zones.
-
-Demonstrates measurable annual energy cost reduction.
-
-Interactive Map
-
-The project includes a Folium-based interactive map:
-
-Berlin district outlines
-
-Cluster layers
-
-Detector-level popups
-
-Toggleable cluster visualization
+## Interactive Map 
+The project includes a Folium-based interactive map:  
+Berlin district outlines  
+Cluster layers  
+Detector-level popups  
+Toggleable cluster visualization  
