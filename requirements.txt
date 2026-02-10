@@ -1,0 +1,10 @@
+branca==0.8.0
+folium==0.18.0
+geopandas==1.0.1
+ipython==8.28.0
+matplotlib==3.10.8
+numpy==2.4.2
+osmnx==2.0.7
+pandas==3.0.0
+scikit_learn==1.8.0
+Shapely==2.1.2
